@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/about/about",
+    "pages/shopcar/shopcar",
+    "pages/wode/wode"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3a78fd",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"#fff"
+  }
+}

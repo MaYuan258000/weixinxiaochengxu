@@ -1,0 +1,6 @@
+<view>
+<view class='fen'>这是分类页面</view>
+<view wx:for="{{goods.list}}">
+ {{item.name}}--{{item.price}}
+</view>
+</view>

@@ -1,0 +1,157 @@
+/**index.wxss**/
+/* .top{
+  width: 100%;
+  height: 350rpx;
+  background: #3a78fd;
+  margin-top: 0rpx;
+}
+.text-1{
+  color: white;
+  margin-left: 30rpx;
+  letter-spacing: 4rpx;
+}
+.top-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60rpx;
+  color: white;
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+}
+.input{
+    padding-left: 10px;
+    height: 44px;
+}
+
+.inputView{
+    background: white;
+    border-radius: 10rpx;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.fang .img{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 200rpx;
+}
+.chufa{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3c7bff;
+  font-size: 35rpx;
+}
+.liebiao{
+   width: 100%;
+  height: 120rpx;
+  display: flex;
+}
+.liebiao-left{
+  width: 30%;
+  height: 120rpx;
+  
+}
+.liebiao-right{
+  width: 70%;
+  height: 120rpx;
+  font-size: 30rpx;
+  color: #999999
+}
+.img1{
+  width: 20%;
+  height: 40rpx;
+  margin-left: 130rpx;
+}
+.bang{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+}
+.bang-left{
+  width: 40%;
+  height: 100rpx;
+}
+.bang-right{
+  width: 60%;
+  height: 100rpx;
+}
+.bang-left image{
+  width: 15%;
+  height: 50rpx;
+  margin-left: 260rpx;
+}
+.bang-right text{
+  color: #a2a2a2;
+  margin-left: 30rpx;
+  letter-spacing: 4rpx;
+}
+.footer{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #426bff;
+  letter-spacing: 4rpx;
+  position: fixed;
+  bottom: 0;
+  background: #ddd;
+} */
+pages,.index{
+  width: 100%;
+  height: 100;
+}
+.index{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container{
+  width: 100%;
+  height: 300rpx;
+  background: #3c78ff ;
+  letter-spacing: 4rpx;
+}
+
+.main-container{
+  width: 100%;
+  flex: 1;
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+}
+
+.join-container{
+  width: 100%;
+  height: 100rpx;
+  background-color: silver;
+  position: fixed;
+  bottom: 0
+}
+.search-input{
+  background: #eee;
+  width: 80%;
+  height: 80rpx;
+  border-radius: 8rpx;
+}
+.show-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.array-item{
+  width: 65%;
+}
+.img1{
+  width: 12%;
+  height: 50rpx;
+  margin-left: 0rpx;
+}
