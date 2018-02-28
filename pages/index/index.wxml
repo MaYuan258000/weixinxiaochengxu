@@ -47,7 +47,12 @@
         <view class='flex2 rowcenter'>
          <view class='flex-box center search-input'>
            <icon type='search' size='25' color='gray'></icon>
-           <input placeholder='请输入搜索的地点' class='margin-left10'></input>
+           <!-- <input placeholder='请输入搜索的地点' class='margin-left10'></input> -->
+           <view class='margin-left11'
+           bindtap='navEvent'
+           >
+           请输入搜索的地点
+            </view>
           </view>
           </view>
     </view>

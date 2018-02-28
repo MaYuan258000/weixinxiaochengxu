@@ -6,9 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goods: goodsData
+    goods: goodsData,
+    historyList:['曹县','东关','西关','南关','北关','马远']
   },
-
+  clearHistory(){
+   this.setData({
+     historyList:[]
+   })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

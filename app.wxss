@@ -38,8 +38,17 @@ flex-direction: column;
 .margin-left10{
   margin-left: 20rpx;
 }
+.margin-left11{
+margin-right: 230rpx;
+}
+.margin-left12{
+margin-right: 100rpx;
+}
 .margin-top10{
   margin-top: 20rpx;
+}
+.margin-right14{
+  margin-right: 30rpx;
 }
 .margin-top12{
   margin-top: 30rpx;
@@ -67,4 +76,41 @@ flex-direction: column;
 .padding-left{
   padding-left: 20rpx
 }
-
+.border-top{
+  border-top: 2rpx solid #ccc
+}
+.border-bottom{
+  border-bottom: 2rpx solid #ccc
+}
+page{
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+}
+/* 按钮定制 */
+.btn{
+  width: 160rpx;
+  height: 80rpx;
+  background-color: #3c78ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  font-size: 33rpx;
+}
+.flex4{
+  flex: 4;
+}
+.flex3{
+  flex: 3;
+}
+.icon{
+  width: 50rpx;
+  height: 45rpx;
+}
+.margin-right13{
+  margin-right: 25rpx;
+}
+.maright-right15{
+  margin-right: 25rpx;
+}

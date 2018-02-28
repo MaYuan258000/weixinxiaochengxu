@@ -1,0 +1,36 @@
+/* pages/about/about.wxss */
+.title{
+  height: 60rpx;
+}
+.search-container{
+  height: 100rpx;
+}
+.search-input{
+  background: #eee;
+  height: 80rpx;
+  width: 90%;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.input-item{
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2rpx solid #ccc;
+  margin-left: 20rpx;
+}
+.item-img{
+  margin-right: 20rpx;
+}
+.item-text{
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  color: #444;
+}
+.creal-box{
+  margin-left: 20rpx;
+  height: 100rpx;
+  border-bottom: 2rpx solid #ccc;
+  color: #999;
+}

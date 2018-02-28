@@ -2,14 +2,14 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/about/about",
+    "pages/search/search",
     "pages/shopcar/shopcar",
     "pages/wode/wode"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#3a78fd",
-    "navigationBarTitleText": "",
+    "navigationBarTitleText": "图吧同行",
     "navigationBarTextStyle":"#fff"
   }
 }

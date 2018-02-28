@@ -1,0 +1,35 @@
+<view>
+<view class='center title'>设置群目的地</view>
+<view class='border-top border-bottom search-container flex-box'>
+<view class="flex4">
+        <view 
+         class='flex-box center    search-input'>
+           <icon type='search'
+            size='25' color='gray' class='margin-right14'>
+            </icon>
+           <input class='margin-left12'
+           bindtap='navEvent'
+           type='text'
+           placeholder='请输入搜索的地点'
+           />
+           </view>
+           
+</view>
+<view class='flex1 center'>
+ <view class='btn margin-right13'>搜索</view>
+</view> 
+</view>
+<view>
+      <view wx:for='{{historyList}}' wx:key="i" class='input-item'>
+       <image src='../../images/time.png' class='icon'></image>
+       <text class='flex1 item-text'>{{item}}</text>
+         <image src='../../images/jiantou.png' class='icon maright-right15'></image>
+      </view>
+</view>
+<view class='center creal-box' bindtap='clearHistory'
+wx:if="{{historyList.length}}"
+>
+  
+  清楚历史记录
+</view>
+</view>

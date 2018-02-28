@@ -5,7 +5,8 @@ var listt=require('./data1')
 Page({
   data: {
     goodss:listt,
-    modelHidden:true
+    modelHidden:true,
+    num:1
   },
   // 盒子点击事件，点击后弹出模态框
   modelEvent(){
@@ -24,6 +25,12 @@ Page({
     this.setData({
       modelHidden: true
     })
+  },
+  navEvent(){
+    //带有返回的路由
+  wx.navigateTo({
+    url: '../search/search',
+  })
   },
   onLoad(){
 
