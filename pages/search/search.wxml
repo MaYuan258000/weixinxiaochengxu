@@ -7,16 +7,19 @@
            <icon type='search'
             size='25' color='gray' class='margin-right14'>
             </icon>
-           <input class='margin-left12'
+           <input 
+           class='margin-left12'
            bindtap='navEvent'
            type='text'
            placeholder='请输入搜索的地点'
+           bindinput='inputEvent'
+           value='{{searchinput}}'
            />
            </view>
            
 </view>
 <view class='flex1 center'>
- <view class='btn margin-right13'>搜索</view>
+ <view class='btn margin-right13' bindtap='searchEvent'>搜索</view>
 </view> 
 </view>
 <view>
