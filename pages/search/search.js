@@ -14,7 +14,9 @@ Page({
   clearHistory(){
    this.setData({
      historyList:[]
-   })
+   });
+   //移除清除缓存
+   wx.removeStorageSync('history')
   },
   //input事件来获取值
   inputEvent(e){
@@ -43,8 +45,16 @@ Page({
     // }
     //第三种方式 如果数组不存在，就给他一个新的数组[]
     !array&&(array=[]);
-    //在input不为空的情况下进行push
-    input&&array.push(input);
+    //在input不为空的情况下并且input里面的值没有在数组中重复在进行push
+    //用js的方式
+    var tag=true;
+    for(var i=0;i<array.length;i++){
+      if(array[i]==input){
+        tag=false;
+      }
+    }
+    // (!array.includes(input))
+    input && tag && array.push(input);
     wx.setStorageSync('history', array);
     this.setData({
       searchinput: '',
@@ -54,9 +64,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var list=wx.getStorageSync('history')
+    var list=wx.getStorageSync('history');
+    !list && (list=[])
+    //原生倒序。
+     var array=[];
+    // for (var i = list.length-1;i>=0;i--){
+    //  array.push(list[i])
+    // }
+    //头部添加倒序
+    // for (var i=0;i<list.length;i++){
+    //  array.unshift(list[i])
+    // }
+   //第三种在数组后面直接reverse()来进行倒序
+   // list.reverse()
     this.setData({
-      historyList:list
+      historyList: list.reverse()
     })
   },
 
