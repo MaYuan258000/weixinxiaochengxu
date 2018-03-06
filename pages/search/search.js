@@ -1,4 +1,5 @@
 var data=getApp()
+import Appservice from '../../service/APppservice.js'
 var goodsData = require('./data')
 Page({
 
@@ -9,7 +10,8 @@ Page({
     goods: goodsData,
     historyList:[],
     inputValue:'',
-    searchinput :''
+    searchinput :'',
+    redeaoList:[]
   },
   clearHistory(){
    this.setData({
@@ -20,10 +22,51 @@ Page({
   },
   //input事件来获取值
   inputEvent(e){
+    var _this = this;
     var value=e.detail.value;
     this.setData({
       inputValue:value
+    });
+   //获取当前为经纬度
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        var speed = res.speed
+        var accuracy = res.accuracy
+         //根据封装的服务，得到一个数据列表
+        Appservice.searchSugest(value, latitude, longitude).then((res)=>{
+          console.log('服务封装',res)
+          var list = res.data.pois;
+          var newList = list.map((item, index) => {
+            return item.name
+          });
+          var recom = _this.dealItemString(newList, value)
+          _this.setData({
+            redeaoList: recom
+          })
+        })
+      }
     })
+  },
+ /**
+  * 函数：dealItemString(list,important)--list需要处理的列表,import匹配关键字
+  * 作用：返回一个处理后的数组，把字符串数组转化为对象数组。
+  */
+  //文字高亮显示
+  dealItemString(list,important){
+    var left,mid,right;
+    //使用map方法，返回一个处理后的数据myList
+    var myList= list.map((item,index)=>{
+      var obj=new Object();
+      var serIndex = item.indexOf(important)//获取匹配字符串的索引值。
+      obj.left = item.substring(0, serIndex)//截取一个居左位置的字符串
+      obj.mid = important;//中间字符串，就是当前匹配关键字
+      obj.right = item.substring(serIndex + important.length,item.length)//截取右边字符串，匹配关键字
+      return obj
+    })
+    return myList//把得到的处理后的list当做函数的返回值！！！
   },
   //搜索存储数据
   searchEvent(){
@@ -53,9 +96,35 @@ Page({
         tag=false;
       }
     }
+    if(input){
+      wx.navigateTo({
+        url: '/pages/searchResult/searchResult?des='+input,
+        // url: '/pages/searchResult/searchResult?des=${input}'
+      })  
+    }else{
+      wx.showModal({
+        title: '提示',
+        content: '请输入搜索内容',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
+
     // (!array.includes(input))
-    input && tag && array.push(input);
+    input && tag && array.push(input) && dealArray(array);
     wx.setStorageSync('history', array);
+    //显示10条数据
+    function dealArray(array){
+     if(array.length>10){
+       array.shift()
+     }
+    }
+
     this.setData({
       searchinput: '',
     })
@@ -81,7 +150,12 @@ Page({
       historyList: list.reverse()
     })
   },
-
+  listEvent:function(e){
+    wx.navigateTo({
+      url: '/pages/searchResult/searchResult?name='+'name',
+      // url: '/pages/searchResult/searchResult?des=${input}'
+    }) 
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

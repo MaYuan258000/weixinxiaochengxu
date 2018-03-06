@@ -22,17 +22,24 @@
  <view class='btn margin-right13' bindtap='searchEvent'>搜索</view>
 </view> 
 </view>
-<view>
-      <view wx:for='{{historyList}}' wx:key="i" class='input-item'>
+<view wx:if='{{!inputValue}}'>
+      <view wx:for='{{historyList}}' wx:key="i" class='input-item' bindtap='listEvent' data-value='{{item}}'>
        <image src='../../images/time.png' class='icon'></image>
        <text class='flex1 item-text'>{{item}}</text>
          <image src='../../images/jiantou.png' class='icon maright-right15'></image>
       </view>
 </view>
 <view class='center creal-box' bindtap='clearHistory'
-wx:if="{{historyList.length}}"
+wx:if="{{historyList.length && inputValue}}"
 >
   
   清楚历史记录
 </view>
+   <view>
+     <view wx:for='{{redeaoList}}' wx:key="i" class='input-item'>
+       <image src='../../images/fangda.png' class='icon'></image>
+       <text class='flex1 item-text'><text>{{item.left}}</text><text class='color-main'>{{item.mid}}</text><text>{{item.right}}</text></text>
+         <image src='../../images/jiantou.png' class='icon maright-right15'></image>
+      </view>
+   </view>
 </view>

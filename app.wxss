@@ -56,6 +56,9 @@ margin-right: 100rpx;
 .margin-top11{
   margin-top: 10rpx;
 }
+.marigh{
+  margin: 15rpx;
+}
 .margin-right10{
   margin-right: 20rpx;
 }
@@ -72,7 +75,13 @@ margin-right: 100rpx;
 .border{
   border: 2rpx solid #ccc
 }
-
+.padding-top{
+  padding-top: 20rpx;
+}
+.padding-top1{
+  padding-top: 10rpx;
+  font-size: 32rpx;
+}
 .padding-left{
   padding-left: 20rpx
 }
@@ -108,9 +117,19 @@ page{
   width: 50rpx;
   height: 45rpx;
 }
+.icon1{
+  width: 30rpx;
+  height: 30rpx;
+}
 .margin-right13{
   margin-right: 25rpx;
 }
 .maright-right15{
   margin-right: 25rpx;
+}
+.color-main{
+  color: #3a78fd;
+}
+.color-ddd{
+  color: #969696;
 }
