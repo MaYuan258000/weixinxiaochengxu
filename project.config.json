@@ -32,6 +32,12 @@
 					"name": "searchResult",
 					"pathName": "pages/searchResult/searchResult",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "searchResult.wxml",
+					"pathName": "pages/searchResult/searchResult",
+					"query": ""
 				}
 			]
 		}

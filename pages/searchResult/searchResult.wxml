@@ -1,9 +1,9 @@
 <!--pages/searchResult/searchResult.wxml-->
-<view class='container'>
+<view class='container1' wx:for='{{redeaoList}}' wx:key='i'>
   <view class='flex-box flex-col list-item'>
      <view class='flex-box flex3'>
      <view class='item-left'>
-        <view class='circle center color-white marigh'>1</view>
+        <view class='circle center color-white marigh'>{{index+1}}</view>
      </view>
      <view class='flex-box flex-col'>
      <view class='padding-top1'>{{item.name}}</view>

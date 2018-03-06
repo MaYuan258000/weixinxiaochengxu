@@ -152,9 +152,10 @@ Page({
   },
   listEvent:function(e){
     wx.navigateTo({
-      url: '/pages/searchResult/searchResult?name='+'name',
+      url: '/pages/searchResult/searchResult?name=' + this.data.name,
       // url: '/pages/searchResult/searchResult?des=${input}'
-    }) 
+    })
+    console.log(this.data.name)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

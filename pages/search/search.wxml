@@ -23,7 +23,7 @@
 </view> 
 </view>
 <view wx:if='{{!inputValue}}'>
-      <view wx:for='{{historyList}}' wx:key="i" class='input-item' bindtap='listEvent' data-value='{{item}}'>
+      <view wx:for='{{historyList}}' wx:key="i" class='input-item' bindtap='listEvent' data-value='{{item}}' data-index='{{index}}'>
        <image src='../../images/time.png' class='icon'></image>
        <text class='flex1 item-text'>{{item}}</text>
          <image src='../../images/jiantou.png' class='icon maright-right15'></image>
