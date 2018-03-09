@@ -53,6 +53,10 @@ margin-right: 230rpx;
 .margin-left12{
 margin-right: 100rpx;
 }
+.maright-left19{
+  margin-left: 260rpx;
+  margin-top: 30rpx;
+}
 .margin-top10{
   margin-top: 20rpx;
 }
@@ -141,4 +145,11 @@ page{
 }
 .color-ddd{
   color: #969696;
+}
+/* 宽高定制 */
+.width100{
+  width: 100rpx;
+}
+.height75{
+  height: 75rpx;
 }

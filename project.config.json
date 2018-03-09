@@ -38,6 +38,30 @@
 					"name": "searchResult.wxml",
 					"pathName": "pages/searchResult/searchResult",
 					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "watchMap.wxml",
+					"pathName": "pages/watchMap/watchMap",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "zhongdian.wxml",
+					"pathName": "pages/zhongdian/zhongdian",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "wode.wxml",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "wode.wxml",
+					"pathName": "pages/wode/wode",
+					"query": ""
 				}
 			]
 		}

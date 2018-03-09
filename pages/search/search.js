@@ -98,9 +98,16 @@ Page({
     }
     if(input){
       wx.navigateTo({
-        url: '/pages/searchResult/searchResult?des='+input,
+        url: '/pages/searchResult/searchResult'
         // url: '/pages/searchResult/searchResult?des=${input}'
-      })  
+      }) 
+      wx.removeStorage({
+        key: 'dataValue',
+      })
+      wx.setStorage({
+        key: 'dataValue',
+        data: input
+      })
     }else{
       wx.showModal({
         title: '提示',
@@ -151,11 +158,21 @@ Page({
     })
   },
   listEvent:function(e){
-    wx.navigateTo({
-      url: '/pages/searchResult/searchResult?name=' + this.data.name,
-      // url: '/pages/searchResult/searchResult?des=${input}'
-    })
-    console.log(this.data.name)
+    // console.log(e.currentTarget.dataset.value);
+    var input = e.currentTarget.dataset.value
+    if (input){
+      wx.navigateTo({
+        url: '/pages/searchResult/searchResult'
+        // url: '/pages/searchResult/searchResult?des=${input}'
+      })
+      wx.removeStorage({
+        key: 'dataValue',
+      })
+      wx.setStorage({
+        key: 'dataValue',
+        data: input,
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

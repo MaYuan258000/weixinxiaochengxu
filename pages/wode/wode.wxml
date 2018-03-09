@@ -1,3 +1,4 @@
-<view>
- <text>这是我的页面</text>
+<view wx:for="{{listt}}" class='deow'>
+    <view class='h23 maright10'><text>{{index+1}}.</text>{{item.title}}</view>
+    <view class=' maright10'>{{item.title1}}</view>
 </view>

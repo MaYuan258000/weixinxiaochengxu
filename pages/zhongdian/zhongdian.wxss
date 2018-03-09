@@ -1,0 +1,16 @@
+
+var
+
+
+
+ww wwww w w wwwwwwwwww/* pages/zhongdian/zhongdian.wxss */
+.speak{
+  width: 80%;
+  height: 80%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0
+}

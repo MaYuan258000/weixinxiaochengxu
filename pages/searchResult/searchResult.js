@@ -8,19 +8,32 @@ Page({
   data: {
     redeaoList: []
   },
-
+  watchMap:function(e){
+    var value = e.currentTarget.dataset.item;
+    console.log(e)
+  if (value) {
+    wx.navigateTo({
+      url: '/pages/watchMap/watchMap?value='+value
+    })
+  }
+  },
+  setDidan:function(e){
+    var value = e.currentTarget.dataset.item;
+    if(value){
+   wx.navigateTo({
+     url: '/pages/zhongdian/zhongdian?value='+value
+   })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      name:options.name
-    })
-    console.log(name)
     var _this=this;
-    let value = '曹县'
+    var datavalue = wx.getStorageSync('dataValue');
+    var value=datavalue;
     wx.setNavigationBarTitle({
-      title: options.des
+      title: datavalue
     });
     wx.getLocation({
       type: 'wgs84',
@@ -32,10 +45,15 @@ Page({
         //根据封装的服务，得到一个数据列表
         Appservice.searchSugest(value, latitude, longitude).then((res) => {
           console.log('服务封装', res)
+          _this.datares=res.data.pois
+         
           var list = res.data.pois;
           var newList = list.map((item, index) => {
             return item.name
           });
+          _this.setData({
+            datares:res.data.pois
+          })
           var recom = _this.dealItemString(newList, value)
           _this.setData({
             redeaoList: recom

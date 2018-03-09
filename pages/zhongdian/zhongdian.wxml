@@ -1,0 +1,20 @@
+<!--pages/zhongdian/zhongdian.wxml-->
+<view class='container'>
+   <view></view>
+   <view>
+   
+   </view>
+   <view>
+   <map></map>
+   </view>
+   <view class='flex-box speak'>
+    <view class='center width100'>
+    <image src='/images/ditu.png' class='icon' bindtap='setEvent'></image>
+    </view>
+    <view class='center flex1'>
+    <button class='speak'>按住说话</button>
+    </view>
+    <view class='center width100'>
+        <image src='/images/ditu.png' class='icon' bindtap='setcheck'></image></view>
+   </view>
+</view>

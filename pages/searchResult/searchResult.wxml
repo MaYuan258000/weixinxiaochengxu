@@ -1,21 +1,21 @@
 <!--pages/searchResult/searchResult.wxml-->
-<view class='container1' wx:for='{{redeaoList}}' wx:key='i'>
-  <view class='flex-box flex-col list-item'>
+<view class='container1'>
+  <view class='flex-box flex-col list-item' wx:for="{{datares}}" wx:key="i">
      <view class='flex-box flex3'>
      <view class='item-left'>
         <view class='circle center color-white marigh'>{{index+1}}</view>
      </view>
-     <view class='flex-box flex-col'>
+     <view class='flex-box flex-col list-item1'>
      <view class='padding-top1'>{{item.name}}</view>
-     <view class='padding-top color-ddd'>曹县汽车站北路</view>
+     <view class='padding-top color-ddd'>{{item.address}}</view>
      </view>
          <view class='item-right padding-top1 color-ddd'>北25km</view>
      </view>
-     <view class='flex-box flex2'>
-       <view class='flex1 center watch-map border  font-size'>
+     <view class='flex-box flex2 list-item1 '>
+       <view class='flex1 center watch-map border  font-size' bindtap='watchMap' data-item='曹县汽车站'>
        <image src='../../images/ditu.png' class='icon'></image>
        看地图</view>
-       <view  class='flex1 center set-des border font-size'>
+       <view  class='flex1 center set-des border font-size' bindtap='setDidan' data-item='曹县汽车站'>
        <image src='../../images/qi_03.jpg' class='icon1'></image>
        设终点</view>
      </view>

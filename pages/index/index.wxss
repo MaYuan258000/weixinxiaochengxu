@@ -121,7 +121,11 @@ pages,.index{
   background: #3c78ff ;
   letter-spacing: 4rpx;
 }
-
+.texx{
+  margin-left: 10rpx;
+  position: relative;
+  top: -10rpx;
+}
 .main-container{
   width: 100%;
   flex: 1;

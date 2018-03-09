@@ -16,7 +16,15 @@ function searchResult(value, latitude, longitude){
      page_num:1
    })
  }
+function login(code, userimg, username){
+  return Basenvice.get('https://wireless.mapbar.com/api/3n1-wxgroup/wxGroup/login.json',{
+         code,
+         userimg,
+         username
+   })
+ }
 module.exports={
   searchSugest,
-  searchResult
+  searchResult,
+  login
 }

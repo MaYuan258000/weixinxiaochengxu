@@ -5,7 +5,12 @@
     "pages/search/search",
     "pages/shopcar/shopcar",
     "pages/wode/wode",
-    "pages/searchResult/searchResult"
+    "pages/searchResult/searchResult",
+    "pages/watchMap/watchMap",
+    "pages/zhongdian/zhongdian",
+    "pages/set/set",
+    "pages/chat/chat",
+    "pages/help/help"
   ],
   "window":{
     "backgroundTextStyle":"light",

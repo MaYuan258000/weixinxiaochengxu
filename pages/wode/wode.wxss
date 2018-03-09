@@ -1,1 +1,12 @@
 /* pages/wode/wode.wxss */
+.h23{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.maright10{
+  margin: 30rpx;
+}
+.deow{
+  width: 100%;
+  height: 130rpx;
+}

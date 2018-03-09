@@ -73,6 +73,10 @@
           </view>
           </view>
         </view>
+        <view class='maright-left19' bindtap='help'>
+            <image src='/images/wenhao.png' class='icon'></image>
+            <text class='texx'>帮助</text>
+        </view>
      </view>
      <view class="join-container center color-main"
      bindtap='modelEvent'
