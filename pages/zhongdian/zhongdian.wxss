@@ -1,16 +1,113 @@
 
-var
-
-
-
-ww wwww w w wwwwwwwwww/* pages/zhongdian/zhongdian.wxss */
 .speak{
-  width: 80%;
+  width: 100%;
   height: 80%;
+  background: white;
 }
 .container{
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0
+}
+.yao{
+  width: 100%;
+  height: 260rpx;
+  color: #000;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+.yuan{
+  width: 22%;
+  height: 60%;
+  border-radius: 50%;
+  border: 8rpx solid #317afd;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+
+  
+}
+.icon2{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.icon9{
+  width: 130rpx;
+  height: 130rpx;
+}
+.ma{
+  margin-left: 70rpx;
+  margin-top: 15rpx;
+  color: #2e80ff;
+  font-size: 32rpx;
+}
+.ma1{
+  margin-left: 275rpx;
+  margin-top: 17rpx;
+   font-size: 32rpx;
+}
+.yuan1{
+  margin-top: -200rpx;
+   margin-left: 240rpx;
+}
+.gong{
+  width: 100%;
+  height: 200rpx;
+  margin-top: 10rpx;
+  display: flex;
+  background: white
+}
+.gong-left{
+  width: 30%;
+  height: 150rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  margin: 15rpx;
+}
+.gong-left1{
+  width: 30%;
+  height: 150rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  margin: 15rpx;
+}
+.gong-left2{
+  width: 30%;
+  height: 150rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  margin: 15rpx;
+}
+.updatee{
+  width: 100%;
+  height: 50rpx;
+ color: #ccc;
+ margin-top: -15rpx;
+ background: white;
+}
+map{
+  width: 900rpx;
+}
+.oped{
+  position: relative;
+  z-index: 50;
+}
+.ding{
+  position: absolute;
+  z-index: 100;
+  left: 100rpx;
+  top: 380rpx;
+  width: 70rpx;
+  height: 70rpx;
+  background: white
+}
+.ding1{
+  position: absolute;
+  z-index: 100;
+  left: 100rpx;
+  top: 500rpx;
+  width: 70rpx;
+  height: 70rpx;
+  background: white
 }

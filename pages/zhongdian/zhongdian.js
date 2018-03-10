@@ -5,7 +5,50 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    latitude: '',
+    longitude: '',
+    controls: [
+      {
+      id: 1,
+      iconPath: '/images/miao.png',
+      position: {
+        left: 40,
+        top: 230 - 50,
+        width: 30,
+        height: 30,
+      },
+      clickable: true
+    },
+      {
+        id: 1,
+        iconPath: '/images/guoqi.png',
+        position: {
+          left: 40,
+          top: 290 - 50,
+          width: 30,
+          height: 30,
+        },
+        clickable: true
+      }
+    
+    ],markers: [{
+      iconPath: '/images/biaoji.png',
+      id: 0,
+      latitude: '34.825508',
+      longitude: '115.542328',
+      width: 50,
+      height: 50
+    }],
+    
+  },
+  controlsEvent: function (e) {
+    console.log(e);
+    var id = e.controlId;
+    if (id == 1) {
+      this.setData({
+        markers: this.data.markers
+      })
+    }
   },
   setEvent: function () {
     wx.navigateTo({

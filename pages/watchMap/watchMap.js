@@ -1,109 +1,194 @@
 // pages/watchMap/watchMap.js
+import Appservice from '../../service/APppservice.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls:[
-      { "item":'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520400202305&di=97cfc926f22edc0bcc1a4c5901db6ee3&imgtype=0&src=http%3A%2F%2Fww1.sinaimg.cn%2Fbmiddle%2F791e61e5jw1esazfaquk6j21hc0zkgxx.jpg'},
-      {
-        'item':'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520400217628&di=f064d381c7ba2b73c1627044deb8d018&imgtype=0&src=http%3A%2F%2Fimg0.pcgames.com.cn%2Fpcgames%2F1503%2F11%2F4926524_153_150311161042_3_thumb.jpg'
-      }
-
-    ],
-    latitude:'',
-    longitude:'',
-  markers:[{
-    id:0,
-    latitude: '34.825508',
-    longitude: '115.542328',
-    iconPath:'/images/biaoji.png',
-    content:'曹县',
-    width:25,
-    height:25
-  },
+    latitude: '',
+    longitude: '',
+    markers: [{
+      city: '菏泽',
+      id: 0,
+      latitude: '34.825508',
+      longitude: '115.542328',
+      iconPath: '/images/biaoji.png',
+      width: 25,
+      height: 25
+    },
     {
+      city: '定陶',
       id: 2,
-      latitude: '35',
-      longitude: '116',
+      latitude: '33',
+      longitude: '114',
+      iconPath: '/images/ditu.png',
+      width: 25,
+      height: 25
+    },
+    {
+      city: '济南',
+      id: 3,
+      latitude: '32',
+      longitude: '113',
+      iconPath: '/images/biaoji.png',
+      width: 25,
+      height: 25
+    },
+    {
+      city: '青岛',
+      id: 4,
+      latitude: '31',
+      longitude: '112',
+      iconPath: '/images/ditu.png',
+      width: 25,
+      height: 25
+    },
+    {
+      city: '五台山',
+      id: 5,
+      latitude: '30',
+      longitude: '111',
       iconPath: '/images/biaoji.png',
       width: 25,
       height: 25
     }
-  
-  ],
-  scale:10,
-  poiList:[]
+
+    ],
+    currentIndex: 0,
+    scale: 10,
+    poiList: []
   },
-  markersEvent:function(e){
-  console.log(e)
+  markersEvent: function (e) {
+    console.log(e)
+    var index = e.markerId
+    this.setData({
+      currenIndex: index
+    })
+  },
+  dealMarkers: function () {
+    var markers = this.data.markers;
+    var index = this.data.currentIndex;
+    var arr = markers.map((item, indeX) => {
+      item.latitude = Number(item.latitude);
+      item.longitude = Number(item.longitude);
+
+      if (indeX != index) {
+        item.iconPath = '/images/biaoji' + (indeX + 1) + '.png'
+      } else {
+        item.iconPath = '/images/biaoji' + (indeX + 1) + '.png'
+        this.setData({
+          latitude: item.latitude,
+          longitude: item.longitude
+        })
+      }
+      return item;
+    });
+    this.setData({
+      markers: arr
+    })
+  },
+  zhong() {
+    wx.navigateTo({
+      url: '/pages/zhongdian/zhongdian',
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  var _this=this;
-  wx.getLocation({
-    success: function(res) {
-      var latitude = res.latitude
-      var longitude = res.longitude
-      var speed = res.speed
-      var accuracy = res.accuracy
-      _this.setData({
-        latitude,
-        longitude
-      })
-    },
-  })
+    var _this = this;
+    wx.getLocation({
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        var speed = res.speed
+        var accuracy = res.accuracy
+        _this.setData({
+          latitude,
+          longitude
+        })
+      },
+    })
+    var _this = this;
+    var datavalue = wx.getStorageSync('dataValue');
+    var value = datavalue;
+    wx.setNavigationBarTitle({
+      title: datavalue
+    });
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        var speed = res.speed
+        var accuracy = res.accuracy
+        //根据封装的服务，得到一个数据列表
+        Appservice.searchSugest(value, latitude, longitude).then((res) => {
+          console.log('服务封装', res)
+          _this.datares = res.data.pois
+          var list = res.data.pois;
+          var newList = list.map((item, index) => {
+            return item.name
+          });
+          _this.setData({
+            datares: res.data.pois
+          })
+          var recom = _this.dealItemString(newList, value)
+          _this.setData({
+            redeaoList: recom
+          })
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

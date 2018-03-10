@@ -1,2 +1,18 @@
 <!--pages/set/set.wxml-->
-<text>pages/set/set.wxml</text>
+<view class='main'>
+<view class='main-1'>
+<view class='main-2'>群名称</view>
+<view class='main-3'>曹县政府
+<image src='/images/youjiantou.png' class='icon6'></image>
+</view>
+</view>
+<view class='main-1'>
+<view class='main-2'>自动播放语音消息</view>
+<view class='main-3'>
+    <switch checked bindchange="switch1Change"/>
+</view>
+</view>
+<view class='main-1'>
+<view class='main-2 mainn' bindtap='jiesan'>解散并退出群组</view>
+</view>
+</view>

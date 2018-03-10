@@ -1,20 +1,45 @@
 <!--pages/zhongdian/zhongdian.wxml-->
 <view class='container'>
-   <view></view>
-   <view>
-   
+   <view class='yao'>
+   <view class="yuan">
+   <image src='/images/timg.jpg' class='icon2'></image>
    </view>
-   <view>
-   <map></map>
+   <view class='ma'>马远</view>
+      <view class="yuan1">
+   <image src='/images/jia.png' class='icon9'></image>
+   </view>
+   <view class='ma1'>邀请</view>
+   </view>
+   <view class='gong'>
+       <view class='gong-left'>
+       <view class='center margin-top10 font-titie'>4.1公里</view>
+       <view class='center font-titie1'>距目的地</view>
+       </view>
+       <view class='gong-left1'>
+        <view class='center margin-top10 font-titie'>10分钟</view>
+       <view class='center font-titie1'>剩余时间</view>
+       </view>
+       <view class='gong-left2'>
+       <view class='center margin-top10 font-titie'>0km/h</view>
+       <view class='center font-titie1'>当前时速</view>
+       </view>
+   </view>
+      <view class='updatee center'>更新于03-08 17：21</view>
+   <view class='oped'>
+   <map  style=" height: 300px;" controls='{{controls}}'
+     bindcontroltap='controlsEvent'
+     markers="{{markers}}"
+     include-points="{{markers}}" 
+   ></map>
    </view>
    <view class='flex-box speak'>
     <view class='center width100'>
-    <image src='/images/ditu.png' class='icon' bindtap='setEvent'></image>
+    <image src='/images/chilun.png' class='icon' bindtap='setEvent'></image>
     </view>
     <view class='center flex1'>
     <button class='speak'>按住说话</button>
     </view>
     <view class='center width100'>
-        <image src='/images/ditu.png' class='icon' bindtap='setcheck'></image></view>
+        <image src='/images/xinxi.png' class='icon' bindtap='setcheck'></image></view>
    </view>
 </view>

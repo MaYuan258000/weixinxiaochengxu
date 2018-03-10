@@ -1,4 +1,7 @@
   /**app.wxss**/
+  page{
+    background: #e5eaed;
+  }
 .container {
   height: 100%;
   display: flex;
@@ -152,4 +155,14 @@ page{
 }
 .height75{
   height: 75rpx;
+}
+
+.font-titie{
+  font-size: 36rpx;
+  color: #5a74ff;
+}
+.font-titie1{
+  font-size: 36rpx;
+  margin-top: 20rpx;
+ color: #ccc;
 }

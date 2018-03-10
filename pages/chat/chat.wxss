@@ -1,1 +1,11 @@
-/* pages/chat/chat.wxss */
+.speak{
+  width: 90%;
+  height: 80%;
+}
+.mode{
+  width: 100%;
+  height: 100rpx;
+  background: white;
+  position: fixed;
+  bottom: 0;
+}

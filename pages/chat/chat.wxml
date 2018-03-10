@@ -1,2 +1,4 @@
 <!--pages/chat/chat.wxml-->
-<text>pages/chat/chat.wxml</text>
+    <view class='center flex1 mode'>
+    <button class='speak'>按住说话</button>
+    </view>

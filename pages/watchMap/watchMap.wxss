@@ -20,14 +20,17 @@ swiper image {
   width: 100%;
   height: 90rpx;
   border-bottom: 1px solid #ddd;
+  background: white;
 }
 .marightt{
   width: 100%;
   height: 70rpx;
+  background: white;
 }
 .she{
   position: relative;
   top: -6rpx;
   font-size: 40rpx;
   margin-left: 10rpx;
+  
 }
