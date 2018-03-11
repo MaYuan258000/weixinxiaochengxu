@@ -12,7 +12,7 @@
          <view class='item-right padding-top1 color-ddd'>北25km</view>
      </view>
      <view class='flex-box flex2 list-item1 '>
-       <view class='flex1 center watch-map border  font-size' bindtap='watchMap' data-item='曹县汽车站'>
+       <view class='flex1 center watch-map border  font-size' bindtap='watchMap' data-item='{{item}}'>
        <image src='../../images/ditu.png' class='icon'></image>
        看地图</view>
        <view  class='flex1 center set-des border font-size' bindtap='setDidan' data-item='曹县汽车站'>

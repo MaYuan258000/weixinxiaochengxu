@@ -8,7 +8,7 @@
   style="width: 100%; height: 300px;"
   class='flex1'></map>
   <view class='height111'>
-   <view class='marght-left'>曹县政府</view>
+   <view class='marght-left'>{{value}}</view>
    <view class='marght-left1'>北142Km</view>
   </view>
   <view class='center marightt'>
