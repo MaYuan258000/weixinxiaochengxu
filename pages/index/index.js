@@ -40,7 +40,7 @@ Page({
     })
   },
   onLoad(){
-
+    console.log(app.globalData.username)
   //  wxServie.login().then((res)=>{
   //     console.log('服务封装的wx',res)
   //     return wxServie.getUserInfo().then(data=>{

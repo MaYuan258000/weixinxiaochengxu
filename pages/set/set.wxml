@@ -13,6 +13,11 @@
 </view>
 </view>
 <view class='main-1'>
-<view class='main-2 mainn' bindtap='jiesan'>解散并退出群组</view>
+<view class='main-2 mainn' bindtap='modelEvent'>解散并退出群组</view>
 </view>
 </view>
+ <!-- <modal hidden="{{modelHidden}}" 
+   bindconfirm="modalChange"
+   bindcancel="modalCancel">
+    <view class='center color-black'>你确定要解散群组吗？</view>
+ </modal> -->

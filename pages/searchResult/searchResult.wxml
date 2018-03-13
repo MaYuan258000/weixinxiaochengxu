@@ -15,7 +15,7 @@
        <view class='flex1 center watch-map border  font-size' bindtap='watchMap' data-item='{{item}}'>
        <image src='../../images/ditu.png' class='icon'></image>
        看地图</view>
-       <view  class='flex1 center set-des border font-size' bindtap='setDidan' data-item='曹县汽车站'>
+       <view  class='flex1 center set-des border font-size' bindtap='setDidan' data-item='{{item}}'>
        <image src='../../images/qi_03.jpg' class='icon1'></image>
        设终点</view>
      </view>

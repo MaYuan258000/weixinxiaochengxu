@@ -1,4 +1,9 @@
 /* pages/about/about.wxss */
+.dd{
+  width: 100%;
+  height: 100%;
+  background: white;
+}
 .title{
   height: 60rpx;
 }

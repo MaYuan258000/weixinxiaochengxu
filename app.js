@@ -34,7 +34,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    username:"mayuan",
+    pwd:123456
   },
   info:{
     name:"mayuan",

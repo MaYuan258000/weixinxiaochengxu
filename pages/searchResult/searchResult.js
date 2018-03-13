@@ -10,7 +10,9 @@ Page({
   },
   watchMap:function(e){
     var value = e.currentTarget.dataset.item;
-    console.log(e)
+    console.log(e);
+    value = JSON.stringify(value);
+    console.log(value)
   if (value) {
     wx.navigateTo({
       url: '/pages/watchMap/watchMap?value='+value
@@ -19,6 +21,7 @@ Page({
   },
   setDidan:function(e){
     var value = e.currentTarget.dataset.item;
+    value = JSON.stringify(value);
     if(value){
    wx.navigateTo({
      url: '/pages/zhongdian/zhongdian?value='+value

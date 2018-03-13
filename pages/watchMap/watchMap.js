@@ -97,8 +97,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     this.setData({
-      value: options.value
+      value: JSON.parse(options.value)
     })
     var _this = this;
     wx.getLocation({
@@ -118,7 +119,7 @@ Page({
     var datavalue = wx.getStorageSync('dataValue');
     var value = datavalue;
     wx.setNavigationBarTitle({
-      title: datavalue
+      title: this.data.value.name
     });
     
     wx.getLocation({

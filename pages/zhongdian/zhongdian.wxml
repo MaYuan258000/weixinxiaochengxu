@@ -33,8 +33,8 @@
    ></map>
    </view>
    <view class='flex-box speak'>
-    <view class='center width100'>
-    <image src='/images/chilun.png' class='icon' bindtap='setEvent'></image>
+    <view class='center width100'  bindtap='setEvent' data-item="{{item}}">
+    <image src='/images/chilun.png' class='icon'></image>
     </view>
     <view class='center flex1'>
     <button class='speak'>按住说话</button>

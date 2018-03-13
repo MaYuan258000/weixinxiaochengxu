@@ -1,4 +1,4 @@
-<view>
+<view class='dd'>
 <view class='center title'>设置群目的地</view>
 <view class='border-top border-bottom search-container flex-box'>
 <view class="flex4">
